@@ -2,10 +2,17 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static double calcularPrecoTotal(int quantidade, double precoUnitario) {
+        return quantidade * precoUnitario;
+    }
+
+    public static double calcularTroco(double valorRecebido, double valorTotal) {
+        return valorRecebido - valorTotal;
+    }
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        CalculadoraLoja calculadora = new CalculadoraLoja();
         int opcao;
 
         do {
@@ -27,7 +34,7 @@ public class Main {
                     System.out.print("Digite o preço unitário da planta: ");
                     double preco = scanner.nextDouble();
 
-                    double total = calculadora.calcularPrecoTotal(quantidade, preco);
+                    double total = calcularPrecoTotal(quantidade, preco);
 
                     System.out.println("Preço total da venda: R$ " + total);
                     break;
@@ -39,7 +46,7 @@ public class Main {
                     System.out.print("Digite o valor total da compra: ");
                     double valorTotal = scanner.nextDouble();
 
-                    double troco = calculadora.calcularTroco(recebido, valorTotal);
+                    double troco = calcularTroco(recebido, valorTotal);
 
                     System.out.println("Troco a ser devolvido: R$ " + troco);
                     break;
@@ -50,6 +57,7 @@ public class Main {
 
                 default:
                     System.out.println("Opção inválida!");
+
             }
 
         } while (opcao != 3);
