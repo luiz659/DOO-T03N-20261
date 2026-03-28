@@ -53,7 +53,7 @@ Um exemplo de linguagem declarativa é o Prolog
 
 
 
-\~\~\~java
+```java
 
 
 
@@ -93,7 +93,7 @@ public class DobroNumero {
 
 }
 
-\~\~\~
+```
 
 
 
